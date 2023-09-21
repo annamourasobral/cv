@@ -1,0 +1,73 @@
+{
+  "profile": {
+    "name": "Anna Luiza de Moura Sobral",
+    "profession": "Software Engineer",
+    "email": "annamourasobral@gmail.com",
+    "phone": "+ 34 657 02 24 82",
+    "linkedin": "https://www.linkedin.com/in/annamourasobral",
+    "github": "https://github.com/annamourasobral"
+  },
+  "experiences": [
+    {
+      "id": 5,
+      "Position": "Product Engineer",
+      "Company": "Qatium",
+      "Start": "01/07/2023",
+      "End": "ongoing",
+      "Location": "Madrid, Spain",
+      "Activities": "I've been working on delivering new user stories using eXtreme Programming. I've been paired up with my peers, and together we've been deploying new versions of Qatium multiple times a day. We're all about test-driven development and constantly refactoring to make things better and keep up the product quality. I'm involved in all parts of the application, from data processing to visualization, leveraging my expertise in certain areas. Dealing with algorithms, graph theory, and stats is part of my regular routine. Collaboration is key for us—I've been working closely with designers, hydraulic engineers, and team members from different disciplines to expand our product. I've also had the opportunity to participate in product definition sessions and workshops, contributing to how Qatium will evolve."
+    },
+    {
+      "id": 4,
+      "Position": "Mentor",
+      "Company": "Hack Your Future",
+      "Start": "01/08/2022",
+      "End": "01/07/2023",
+      "Location": "Copenhagen, Denmark",
+      "Activities": "Contributed to improving the lives of others through tech education. Became a better expert of your own craft by teaching your knowledge. Exposed myself to different cultures and different ways of thinking & working. Became a part of HackYourFuture’s professional network "
+    },
+    {
+      "id": 3,
+      "Position": "Full-Stack Developer",
+      "Start": "01/08/2022",
+      "End": "01/06/2023",
+      "Location": "Copenhagen, Denmark",
+      "Company": "Walor",
+      "Activities": "Expanded my scope to full stack development, acquiring skills in JavaScript, TypeScript, PHP, Laravel and MySQL. Integrated with other platforms and utilized various relevant libraries for projects. Deepened understanding of software architecture and best development practices. Led complete projects from planning to successful implementation and launch. Effectively collaborated with multidisciplinary teams, ensuring the delivery of comprehensive and robust solutions. As a full stack developer, I am confident in tackling technical challenges using my knowledge in React, Redux, Styled Components, JavaScript, TypeScript, PHP, Laravel, integrations with other platforms, and diverse libraries to deliver efficient and high-quality solutions."
+    },
+    {
+      "id": 2,
+      "Position": "Frontend Developer",
+      "Company": "Walor",
+      "Start": "01/08/2022",
+      "End": "01/08/2022",
+      "Location": "Copenhagen, Denmark",
+      "Activities": "After the internship, I became a junior frontend developer, consolidating my skills with React, Redux, and deepening my knowledge in TypeScript. Participated in more complex projects, developing attractive and responsive user interfaces. Collaborated with the designer and project manager and other developers, ensuring the delivery of high quality products."
+    },
+    {
+      "id": 1,
+      "Position": "Frontend Developer Intern",
+      "Company": "Walor",
+      "Start": "01/04/2022",
+      "End": "01/08/2022",
+      "Location": "Copenhagen, Denmark",
+      "Activities": "I learned fundamental concepts of HTML, CSS and JavaScript, contributing to smaller projects in collaboration with more experienced developers. I started as an intern in frontend development, working with technologies such as React, Redux and Styled Components. Gained experience in implementing layouts and functionalities, using popular frameworks and libraries."
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "University": "UniAmerica",
+      "Conclusion": "November 2023",
+      "Degree": "BTech - Systems Development Analysis",
+      "Grade": "A"
+    },
+    {
+      "id": 2,
+      "University": "UniAmerica",
+      "Conclusion": "June 2024",
+      "Degree": "Bachelor of Science in Computer Science",
+      "Grade": "A"
+    }
+  ]
+}

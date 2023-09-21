@@ -1,32 +1,22 @@
+import "./styles/Experience.css"
+import { ExperienceType } from "../assets/types"
 import React, { useState, useEffect } from "react"
-
-type ExperienceType = {
-  id: number
-  title: string
-  company: string
-  description: string
-  startDate: string
-  endDate: string
-  location: string
-}
 
 interface ExperienceProps {
   experience: ExperienceType
 }
 
 const Experience: React.FC<ExperienceProps> = ({ experience }) => {
-  const [isEditingExperience, setIsEditingExperience] = useState(false)
   const [experienceData, setExperienceData] = useState<ExperienceType>(experience)
+  const [isEditingExperience, setIsEditingExperience] = useState(false)
 
-  useEffect(() => {
-    setExperienceData(experience)
-  }, [experience])
-
-  const handleInputChange = (fieldName: keyof ExperienceType, value: string) => {
-    setExperienceData(prevExperienceData => ({
-      ...prevExperienceData,
-      [fieldName]: value,
-    }))
+  const isValidated = (): boolean => {
+    for (const fieldValue of Object.values(experienceData)) {
+      if (!fieldValue) {
+        return false
+      }
+    }
+    return true
   }
 
   const handleCancel = () => {
@@ -34,34 +24,52 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
     setIsEditingExperience(false)
   }
 
+  useEffect(() => {
+    setExperienceData(experience)
+  }, [experience])
+
   return (
     <div id="experience">
-      <div id="inputs">
+      <div id="experience-inputs">
         {Object.keys(experienceData).map(fieldName => {
           if (fieldName === "id") {
             return null
-          } else if (fieldName === "description") {
+          } else if (fieldName === "Activities") {
             return (
-              <textarea
-                key={`description-${experienceData.id}`}
-                id={`description-${experienceData.id}`}
-                className="description"
-                value={experienceData.description}
-                onChange={e => handleInputChange("description", e.target.value)}
-                disabled={!isEditingExperience}
-              />
+              <div key={`Activities-${experience.id}`} className="Activities">
+                <label htmlFor={`Activities-${experience.id}`}> {fieldName}</label>
+                <textarea
+                  required
+                  disabled={!isEditingExperience}
+                  id={`Activities-${experience.id}`}
+                  value={experienceData.Activities}
+                  onChange={e =>
+                    setExperienceData(experienceData => ({
+                      ...experienceData,
+                      [fieldName as keyof ExperienceType]: e.target.value,
+                    }))
+                  }
+                />
+              </div>
             )
           } else {
             return (
-              <input
-                key={`${fieldName}-${experienceData.id}`}
-                id={`${fieldName}-${experienceData.id}`}
-                className={fieldName}
-                type="text"
-                value={experienceData[fieldName as keyof ExperienceType]}
-                onChange={e => handleInputChange(fieldName as keyof ExperienceType, e.target.value)}
-                disabled={!isEditingExperience}
-              />
+              <div key={`${fieldName}-${experience.id}`} className={fieldName}>
+                <label htmlFor={`${fieldName}-${experience.id}`}> {fieldName}</label>
+                <input
+                  required
+                  type="text"
+                  disabled={!isEditingExperience}
+                  id={`${fieldName}-${experience.id}`}
+                  value={experienceData[fieldName as keyof ExperienceType]}
+                  onChange={e =>
+                    setExperienceData(experienceData => ({
+                      ...experienceData,
+                      [fieldName as keyof ExperienceType]: e.target.value,
+                    }))
+                  }
+                />
+              </div>
             )
           }
         })}
@@ -72,7 +80,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
             <button className="cancel-btn" onClick={handleCancel}>
               Cancel
             </button>
-            <button className="save-btn" onClick={() => setIsEditingExperience(false)}>
+            <button className="save-btn" disabled={!isValidated()} onClick={() => setIsEditingExperience(false)}>
               Save
             </button>
           </>

@@ -1,0 +1,51 @@
+#profile {
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.name {
+  grid-area: 1 / 1 / 2 / 3;
+  font-size: 32px;
+  padding-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+.profession {
+  grid-area: 2 / 1 / 3 / 3;
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+}
+.email {
+  grid-area: 3 / 1 / 4 / 2;
+  font-size: 16px;
+}
+.phone {
+  grid-area: 4 / 1 / 5 / 2;
+  font-size: 16px;
+}
+.linkedin {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.github {
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.linkedin,
+.github {
+  font-size: 16px;
+  width: 393.297px;
+  height: 52px;
+  padding: 1px 0px 8px 0px;
+  font-family: "Times New Roman";
+  border: none;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.linkedin:hover,
+.github:hover {
+  cursor: pointer;
+}

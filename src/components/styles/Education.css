@@ -1,0 +1,31 @@
+#education-inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  font-size: 16px;
+}
+
+.University {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.Conclusion {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.Degree {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.Grade {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.University,
+.Conclusion,
+.Degree,
+.Grade {
+  width: 100%;
+  font-size: 16px;
+  height: 2rem;
+}
